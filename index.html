@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebSockets</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
 
-  <body>
-    <div class="mainBlock">
-      <div class="chatBlock">
-        <p class="message">Bogdan</br><span class="messageText">Hello</span></p>
-        <p class="message">Kristi</br><span class="messageText">Hikjndsakjafbnjkasdnjkfnasjlkdnfjknasdjknfjkasdjknbfjkansjbnfnbjkabsdjkfbajksbefjbqwejkaxno</span></p>
-        <p class="message">Mura</br><span class="messageText">Privet</span></p>
-        <p class="message">Vanya</br><span class="messageText">Salam iiyy</span></p>
-        <p class="message">Dima</br><span class="messageText">4matic</span></p>
-        <p class="myMessage">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita voluptas at explicabo aspernatur! Praesentium consectetur, debitis minus, accusamus inventore minima modi quasi, accusantium officiis eos doloremque sequi? Incidunt, voluptatibus nulla.
-        Odit vero culpa, laudantium eius asperiores nostrum ducimus quasi pariatur fuga iste. Obcaecati, dolorem provident perferendis, est similique voluptas incidunt ab a vel placeat excepturi, mollitia doloremque. Laudantium, voluptates quos?
-        At, dolore vitae totam modi repudiandae nam iusto facilis quidem error, maxime fugit, voluptatem laudantium! Ab dicta mollitia quo nostrum nam porro, enim rem unde. Quam aspernatur dolorem blanditiis cupiditate.
-        Unde cupiditate architecto, vero id autem ducimus non laudantium praesentium minima nulla minus! Voluptate repellat debitis, quas ipsa perferendis repudiandae commodi, fuga veritatis consequatur ut in obcaecati eos. Similique, id!
-        Cumque ea optio fugiat sunt asperiores totam facere corporis quis deserunt harum quod iste minima suscipit illum, dolorum neque impedit. Dolorum non nesciunt quisquam facere quae eum accusantium adipisci corporis?</p>
-      </div>
-      <form class="messageForm">
-        <input class="messageInput" placeholder="Type something..." />
-        <button class="sendMessageBtn" type="submit">Send</button>
-      </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebSockets</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <div class="mainBlock">
+    <form class="userNameForm"><input class="userNameInput" type="text" placeholder="Enter your name" /><button class="sendUserNameBtn" type='submit'>Go!</button>
+    </form>
+    <div class="chatBlock">
+      <p class="message">Bogdan</br><span class="messageText">Hello</span></p>
+      <p class="message">Kristi</br><span
+          class="messageText">Hikjndsakjafbnjkasdnjkfnasjlkdnfjknasdjknfjkasdjknbfjkansjbnfnbjkabsdjkfbajksbefjbqwejkaxno</span>
+      </p>
+      <p class="message">Mura</br><span class="messageText">Privet</span></p>
+      <p class="message">Vanya</br><span class="messageText">Salam iiyy</span></p>
+      <p class="message">Dima</br><span class="messageText">4matic</span></p>
+      <p class="myMessage">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita voluptas at explicabo
+        aspernatur! Praesentium consectetur, debitis minus, accusamus inventore minima modi quasi, accusantium officiis
+        eos doloremque sequi? Incidunt, voluptatibus nulla.
+        Odit vero culpa, laudantium eius asperiores nostrum ducimus quasi pariatur fuga iste. Obcaecati, dolorem
+        provident perferendis, est similique voluptas incidunt ab a vel placeat excepturi, mollitia doloremque.
+        Laudantium, voluptates quos?
+        At, dolore vitae totam modi repudiandae nam iusto facilis quidem error, maxime fugit, voluptatem laudantium! Ab
+        dicta mollitia quo nostrum nam porro, enim rem unde. Quam aspernatur dolorem blanditiis cupiditate.
+        Unde cupiditate architecto, vero id autem ducimus non laudantium praesentium minima nulla minus! Voluptate
+        repellat debitis, quas ipsa perferendis repudiandae commodi, fuga veritatis consequatur ut in obcaecati eos.
+        Similique, id!
+        Cumque ea optio fugiat sunt asperiores totam facere corporis quis deserunt harum quod iste minima suscipit
+        illum, dolorum neque impedit. Dolorum non nesciunt quisquam facere quae eum accusantium adipisci corporis?</p>
     </div>
+    <form class="messageForm">
+      <input class="messageInput" placeholder="Type something..." type="text" />
+      <button class="sendMessageBtn" type="submit">Send</button>
+    </form>
+  </div>
 
-    <script>
-      const mainBlock = document.querySelector(".mainBlock");
-      console.log(window.innerWidth);
-      if (window.innerWidth > 500) {
-        mainBlock.style.height = "90vh";
-        // mainBlock.style.border = 0;
-      }
-      const ws = new WebSocket("ws://localhost:3000");
-      ws.onopen = () => {
-        console.log("Connected");
-      };
+  <script>
+    const mainBlock = document.querySelector(".mainBlock");
+    console.log(window.innerWidth);
+    if (window.innerWidth > 500) {
+      mainBlock.style.height = "90vh";
+      // mainBlock.style.border = 0;
+    }
+    const ws = new WebSocket("ws://localhost:3000");
+    ws.onopen = () => {
+      console.log("Connected");
+    };
 
-      ws.onmessage = (ev) => {
-        console.log(ev.data);
-      };
-    </script>
-  </body>
+    ws.onmessage = (ev) => {
+      console.log(ev.data)
+    };
+  </script>
+</body>
+
 </html>
