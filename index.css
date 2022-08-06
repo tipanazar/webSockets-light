@@ -17,8 +17,29 @@ p {
   height: 100vh;
   width: 100vw;
   max-width: 500px;
-  border: 5px solid black;
   background-color: aliceblue;
+}
+
+.userNameForm {
+  display: flex;
+  height: 6%;
+  width: 100%;
+  border-bottom: 3px solid rgb(0, 54, 134);
+}
+
+.userNameInput {
+  width: 100%;
+  border: 0;
+  padding-left: 7px;
+}
+
+.userNameInput:focus-visible {
+  outline: 0;
+}
+
+.sendUserNameBtn {
+  border: 0;
+  cursor: pointer;
 }
 
 .chatBlock {
