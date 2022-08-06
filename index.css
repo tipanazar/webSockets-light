@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Montserrat;
+}
+
+p {
+  margin: 0;
+}
+
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  max-width: 500px;
+  border: 5px solid black;
+  background-color: aliceblue;
+}
+
+.chatBlock {
+  height: 100%;
+  overflow: auto;
+  padding: 7px;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 23px;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 1.35em;
+}
+
+.myMessage {
+  margin-left: auto;
+  max-width: 70%;
+  width: fit-content;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #56b1da4f;
+  line-height: 1.35em;
+}
+
+.messageText {
+  max-width: fit-content;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #d2a01ba1;
+  display: block;
+}
+
+.messageForm {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 7%;
+  width: 100%;
+  border-top: 3px solid rgb(0, 54, 134);
+}
+
+.messageInput {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  padding: 0 5px 0;
+  font-size: 17px;
+}
+
+.messageInput:focus-visible {
+  outline: 0;
+}
+
+.sendMessageBtn {
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+}

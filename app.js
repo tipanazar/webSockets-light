@@ -2,18 +2,18 @@ const ws = new require("ws");
 
 const wsServer = new ws.Server({ port: 3000 });
 
-const clients = [];
+const users = [];
 
-wsServer.on("connection", (newClient) => {
-  clients.push(newClient);
-  // console.log(newClient);
+wsServer.on("connection", (newUser) => {
+  users.push(newUser);
+  // console.log(newUser);
   setTimeout(() => {
-    newClient.send("Вы в чате");
+    newUser.send("Вы в чате");
   }, 3000);
 
-  clients.forEach((client) => {
-    if (client !== newClient) {
-      client.send("У нас новый участник!!!");
+  users.forEach((user) => {
+    if (user !== newUser) {
+      user.send("У нас новый участник!!!");
     }
   });
 });
