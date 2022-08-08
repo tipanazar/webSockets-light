@@ -1,5 +1,5 @@
 {
-  "name": "easychat--backend",
+  "name": "webSockets-light",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tipanazar/easyChat--backend.git"
+    "url": "git+https://github.com/tipanazar/webSockets-light"
   },
   "keywords": [],
-  "author": "",
+  "author": "tipanazar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tipanazar/easyChat--backend/issues"
+    "url": "https://github.com/tipanazar/webSockets-light/issues"
   },
-  "homepage": "https://github.com/tipanazar/easyChat--backend#readme",
+  "homepage": "https://github.com/tipanazar/webSockets-light#readme",
   "dependencies": {
     "ws": "^8.8.1"
   }

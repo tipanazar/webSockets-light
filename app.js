@@ -6,10 +6,19 @@ const users = [];
 
 wsServer.on("connection", (newUser) => {
   users.push(newUser);
-  // console.log(newUser);
   setTimeout(() => {
     newUser.send("Вы в чате");
-  }, 3000);
+  }, 1000);
+
+  newUser.on("message", (data) => {
+    const parsedData = JSON.parse(data);
+    const stringedData = JSON.stringify(parsedData);
+    users.forEach((user) => {
+      if (user !== newUser) {
+        user.send(stringedData);
+      }
+    });
+  });
 
   users.forEach((user) => {
     if (user !== newUser) {
