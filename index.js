@@ -11,16 +11,16 @@ if (window.innerWidth > 500) {
 }
 
 // Запуск WS сервера
-// const ws = new WebSocket("ws://localhost:3000");
+// const ws = new WebSocket("ws://localhost:5000");
 const ws = new WebSocket("ws://websockets-light.herokuapp.com");
 ws.onopen = () => {
-  console.log("Connected");
+  console.log("Frontend connected");
 };
 ws.onmessage = (ev) => {
   ev.data === "Вы в чате"
-    ? console.log(ev.data)
+    ? alert(ev.data)
     : ev.data === "У нас новый участник!!!"
-    ? console.log(ev.data)
+    ? alert(ev.data)
     : receiveMessage(ev.data);
   function receiveMessage(data) {
     const { name, message } = JSON.parse(data);
