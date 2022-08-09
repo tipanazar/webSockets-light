@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/tipanazar/webSockets-light/issues"
   },
-  "homepage": "https://github.com/tipanazar/webSockets-light#readme",
-  "dependencies": {
-    "ws": "^8.8.1"
-  }
+  "homepage": "https://github.com/tipanazar/webSockets-light#readme"
 }
