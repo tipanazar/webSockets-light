@@ -6,7 +6,7 @@ const userMessageForm = document.querySelector(".messageForm");
 let userName = "";
 
 if (window.innerWidth > 500) {
-  mainBlock.style.margin = 0;
+  mainBlock.style.height = "90vh";
   mainBlock.style.border = "5px solid black";
 }
 
