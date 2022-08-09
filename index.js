@@ -11,7 +11,8 @@ if (window.innerWidth > 500) {
 }
 
 // Запуск WS сервера
-const ws = new WebSocket("ws://localhost:3000");
+// const ws = new WebSocket("ws://localhost:3000");
+const ws = new WebSocket("wss://websockets-light.herokuapp.com");
 ws.onopen = () => {
   console.log("Connected");
 };
