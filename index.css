@@ -18,6 +18,10 @@ p {
   width: 100vw;
   max-width: 500px;
   background-color: aliceblue;
+
+  height: 90vh;
+  margin-top: auto;
+  border-top: 3px solid black;
 }
 
 .userNameForm {
@@ -93,7 +97,7 @@ p {
 .messageForm {
   display: flex;
   flex-wrap: nowrap;
-  height: 7%;
+  height: 12%;
   width: 100%;
   border-top: 3px solid rgb(0, 54, 134);
 }
